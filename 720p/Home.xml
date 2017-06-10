@@ -17,9 +17,13 @@
 		<include>BackgroundVignette</include>
 	  <control type="group">
 			<include>InfoDialogsVisible_ZoomAnimation</include>
-			<include>HomeMenuWraplist</include>
+			<!-- NERO MOD -->
+			<include condition="!Skin.HasSetting(ClassicHomeMenu)">HomeMenuWraplist</include>
+			<include condition="Skin.HasSetting(ClassicHomeMenu)">HomeMenuWraplistClassic</include>
 			<include>HomeSubMenus</include>
-			<include>HomeMenuExtraInfo</include>
+			<!-- NERO MOD -->
+			<include condition="!Skin.HasSetting(ClassicHomeMenu)">HomeMenuExtraInfo</include>
+			<include condition="Skin.HasSetting(ClassicHomeMenu)">HomeMenuExtraInfoClassic</include>
 			<include>HomeWidgets_Lists</include>
 			<include>HomeNowPlaying</include>
 			<include>CommonDialogsFadeOutBG</include>

@@ -281,6 +281,10 @@
 						<onclick>Skin.ToggleSetting(HideHomeNPMusicInfo)</onclick>
 						<selected>Skin.HasSetting(HideHomeNPMusicInfo)</selected>
 					</control>
+					
+		      <!-- NERO MOD -->	
+			  <include>NeroSkinSettings</include>						
+					
 				</control>
 
 				<!-- ================= -->

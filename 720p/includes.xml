@@ -17,6 +17,8 @@
 	<include file="script-skinshortcuts-includes.xml" />
 	<include file="IncludesDialogs.xml" />
 	<include file="IncludesOSD.xml" />
+	<!-- NERO MOD -->
+	<include file="IncludesNero.xml" />	
 
 <!-- 
   Custom Windows IDs (This is for references purpose only)
@@ -1272,10 +1274,10 @@
 		<value>FF12B2E7</value>
 	</variable>
 
-	<variable name="BG.GlobalColor">
+	<!--variable name="BG.GlobalColor">
 		<value condition="!String.IsEmpty(Skin.String(BG.GlobalColor))">$INFO[Skin.String(BG.GlobalColor)]</value>
 		<value>FFCB2BFF</value>
-	</variable>
+	</variable-->
 
 	<variable name="CustomDialogOKHeadLabel">
 		<value condition="Window.IsVisible(SkinSettings)">$LOCALIZE[31169]</value>

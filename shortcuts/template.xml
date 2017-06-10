@@ -139,7 +139,8 @@
 			<!-- Submenus -->
 			<control type="fixedlist" id="23">
 				<skinshortcuts>visibility</skinshortcuts>
-				<include>HomeSubMenus_ListVars</include>
+				<include condition="!Skin.HasSetting(ClassicHomeMenu)">HomeSubMenus_ListVars</include>		 <!-- NERO MOD -->
+				<include condition="Skin.HasSetting(ClassicHomeMenu)">HomeSubMenus_ListVars_Classic</include><!-- NERO MOD -->
 				<content>
 					<skinshortcuts>items</skinshortcuts>
 				</content>
