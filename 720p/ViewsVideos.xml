@@ -1417,7 +1417,7 @@
 				<preloaditems>4</preloaditems>
 				<viewtype label="31085">icons</viewtype>
         <scrolltime tween="Quadratic" easing="out">300</scrolltime>
-        <visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(MusicVideos)] + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
+        <visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(MusicVideos)]</visible>
 			  <visible></visible>
 				<itemlayout height="246" width="171">
 					<control type="image">
@@ -1702,7 +1702,7 @@
 	      <focusposition>1</focusposition>
 				<viewtype label="31090">icons</viewtype>
         <scrolltime tween="quadratic" easing="out">350</scrolltime>
-        <visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos)] + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
+        <visible>[Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes) | Container.Content(MusicVideos)]</visible>
 				<itemlayout height="465" width="400">
 			    <include content="TilesViewLayout">
 			      <param name="textcolor" value="viewsinfo"/>
@@ -1820,7 +1820,7 @@
 	      <preloaditems>2</preloaditems>
 	      <focusposition>2</focusposition>
 			  <pagecontrol>60</pagecontrol>
-				<visible>[Container.Content(Movies) | Container.Content(Sets)] + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
+				<visible>[Container.Content(Movies) | Container.Content(Sets)]</visible>
 				<itemlayout width="446" height="450">
 					<control type="image">
 				    <top>20</top>
@@ -2052,7 +2052,7 @@
   			<orientation>horizontal</orientation>
   			<preloaditems>2</preloaditems>
 	      <viewtype label="$LOCALIZE[31084] 2">list</viewtype>
-	      <visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)] + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
+	      <visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)]</visible>
   			<itemlayout width="2000" height="300"/>
   			<focusedlayout width="2000" height="300">
   				<control type="image">
@@ -2709,7 +2709,7 @@
 			<preloaditems>2</preloaditems>
 			<focusposition>3</focusposition>
 			<hitrect x="285" y="176" w="248" h="362"/>
-			<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)] + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
+			<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)]</visible>
 			<itemlayout width="248" height="362"/>
 			<focusedlayout width="248" height="362">
 				<control type="image">
@@ -3006,7 +3006,7 @@
 			<preloaditems>2</preloaditems>
 			<focusposition>3</focusposition>
 			<hitrect x="285" y="176" w="248" h="362"/>
-			<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)] + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
+			<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)]</visible>
 			<itemlayout width="248" height="362"/>
 			<focusedlayout width="248" height="362">
 				<control type="image">
@@ -3527,7 +3527,7 @@
 				<scrolltime tween="Cubic" easing="out">450</scrolltime>
 				<orientation>horizontal</orientation>
 				<include condition="Window.IsVisible(videos)">VideoWallFanartVideos</include>
-				<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)] + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
+				<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)]</visible>
 			</control>
 		</control>
 
@@ -3664,7 +3664,7 @@
   		  <scrolltime tween="quadratic" easing="out">350</scrolltime>
   			<preloaditems>2</preloaditems>
   			<focusposition>0</focusposition>
-				<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)] + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
+				<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows)]</visible>
   			<itemlayout width="248" height="362"/>
   			<focusedlayout width="248" height="362"/>
   		</control>
@@ -3816,7 +3816,7 @@
 	      <preloaditems>2</preloaditems>
 	      <focusposition>0</focusposition>
 			  <pagecontrol>60</pagecontrol>
-				<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)] + !String.StartsWith(Container.FolderPath,plugin://plugin)</visible>
+				<visible>[Container.Content(Movies) | Container.Content(Sets) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Episodes)]</visible>
 				<itemlayout condition="Container.Content(Movies) | Container.Content(Sets) | Container.Content(MusicVideos)" width="149.5" height="256">
       		<control type="image">
       			<width>142</width>

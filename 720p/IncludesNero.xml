@@ -4,19 +4,43 @@
 <!-- ============= -->
 <!-- NERO VARIABLES -->
 <!-- ============= -->	
+	
+	<variable name="Textures.GlobalColor">
+		<value condition="!String.IsEmpty(Skin.String(Textures.GlobalColor))">$INFO[Skin.String(Textures.GlobalColor)]</value>
+		<value condition="String.IsEmpty(Skin.String(Textures.GlobalColor)) + Skin.HasTheme(Bello)">FFCB2BFF</value>		
+		<value condition="String.IsEmpty(Skin.String(Textures.GlobalColor)) + Skin.HasTheme(Blue)">FF12B2E7</value>	
+		<value condition="String.IsEmpty(Skin.String(Textures.GlobalColor)) + Skin.HasTheme(Green)">FF507B00</value>	
+		<value condition="String.IsEmpty(Skin.String(Textures.GlobalColor)) + Skin.HasTheme(Midnight)">FF4D4D4D</value>		
+		<value condition="String.IsEmpty(Skin.String(Textures.GlobalColor)) + Skin.HasTheme(Nero)">FF4D4D4D</value>	
+		<value condition="String.IsEmpty(Skin.String(Textures.GlobalColor)) + Skin.HasTheme(Pink)">FFD800C6</value>	
+		<value condition="String.IsEmpty(Skin.String(Textures.GlobalColor)) + Skin.HasTheme(Red)">FFB80034</value>		
+		<value>FF12B2E7</value>
+	</variable>
 
+	<variable name="Text.GlobalColor">
+		<value condition="!String.IsEmpty(Skin.String(Text.GlobalColor))">$INFO[Skin.String(Text.GlobalColor)]</value>
+		<value condition="String.IsEmpty(Skin.String(Text.GlobalColor)) + Skin.HasTheme(Bello)">FFCB2BFF</value>		
+		<value condition="String.IsEmpty(Skin.String(Text.GlobalColor)) + Skin.HasTheme(Blue)">FF12B2E7</value>	
+		<value condition="String.IsEmpty(Skin.String(Text.GlobalColor)) + Skin.HasTheme(Green)">FF507B00</value>	
+		<value condition="String.IsEmpty(Skin.String(Text.GlobalColor)) + Skin.HasTheme(Midnight)">FF4D4D4D</value>		
+		<value condition="String.IsEmpty(Skin.String(Text.GlobalColor)) + Skin.HasTheme(Nero)">FF4D4D4D</value>	
+		<value condition="String.IsEmpty(Skin.String(Text.GlobalColor)) + Skin.HasTheme(Pink)">FFCF00D3</value>	
+		<value condition="String.IsEmpty(Skin.String(Text.GlobalColor)) + Skin.HasTheme(Red)">FFB80034</value>
+		<value>FF12B2E7</value>
+	</variable>	
+	
 	<variable name="BG.GlobalColor">
 		<value condition="!String.IsEmpty(Skin.String(BG.GlobalColor))">$INFO[Skin.String(BG.GlobalColor)]</value>
 		<value condition="String.IsEmpty(Skin.String(BG.GlobalColor)) + Skin.HasTheme(Bello)">FFCB2BFF</value>		
 		<value condition="String.IsEmpty(Skin.String(BG.GlobalColor)) + Skin.HasTheme(Blue)">FF1856B4</value>	
 		<value condition="String.IsEmpty(Skin.String(BG.GlobalColor)) + Skin.HasTheme(Green)">FF507B00</value>	
 		<value condition="String.IsEmpty(Skin.String(BG.GlobalColor)) + Skin.HasTheme(Midnight)">FF4D4D4D</value>		
-		<value condition="String.IsEmpty(Skin.String(BG.GlobalColor)) + Skin.HasTheme(Nero)">FF292929</value>	
-		<value condition="String.IsEmpty(Skin.String(BG.GlobalColor)) + Skin.HasTheme(Pink)">FFCF00D3</value>	
-		<value condition="String.IsEmpty(Skin.String(BG.GlobalColor)) + Skin.HasTheme(Red)">FFB80034</value>				
+		<value condition="String.IsEmpty(Skin.String(BG.GlobalColor)) + Skin.HasTheme(Nero)">FF3E3E3E</value>	
+		<value condition="String.IsEmpty(Skin.String(BG.GlobalColor)) + Skin.HasTheme(Pink)">FFFF00C6</value>	
+		<value condition="String.IsEmpty(Skin.String(BG.GlobalColor)) + Skin.HasTheme(Red)">FFB80034</value>
 		<value>FF1856B4</value>
 	</variable>
-
+	
 	<variable name="darkpulse">
 		<value condition="Skin.HasTheme(Bello)">special://skin/extras/neropulse/bello_dark_pulse.png</value>
 		<value condition="Skin.HasTheme(Blue)">special://skin/extras/neropulse/blue_dark_pulse.png</value>
@@ -27,7 +51,18 @@
 		<value condition="Skin.HasTheme(Red)">special://skin/extras/neropulse/red_dark_pulse.png</value>		
 		<value>special://skin/extras/neropulse/blue_dark_pulse.png</value>
 	</variable>	
-
+	
+	<variable name="darkpulsediffuse">
+		<value condition="Skin.HasTheme(Bello)">DD000000</value>
+		<value condition="Skin.HasTheme(Pink)">99000000</value>		
+		<!--value condition="Skin.HasTheme(Blue)"></value>
+		<value condition="Skin.HasTheme(Green)"></value>
+		<value condition="Skin.HasTheme(Midnight)"></value>		
+		<value condition="Skin.HasTheme(Nero)"></value>
+		<value condition="Skin.HasTheme(Red)"></value-->		
+		<value>EE000000</value>
+	</variable>		
+	
 	<variable name="lightpulse">
 		<value condition="Skin.HasTheme(Bello)|Skin.HasTheme(Midnight)|Skin.HasTheme(Nero)">special://skin/extras/neropulse/light_pulse_gray.png</value>	
 		<value condition="Skin.HasTheme(Blue)|Skin.HasTheme(Green)|Skin.HasTheme(Pink)|Skin.HasTheme(Red)">special://skin/extras/neropulse/light_pulse_blk.png</value>		
@@ -61,7 +96,7 @@
 				<left>-480</left>
 				<height>720</height>
 				<width>1280</width>
-				<texture>windows/bg/darkspot.png</texture>
+				<texture colordiffuse="$VAR[darkpulsediffuse]">windows/bg/darkspot.png</texture>
 				<align>center</align>
 				<aligny>center</aligny>
 			</control>
@@ -71,7 +106,7 @@
 				<left>0</left>
 				<height>720</height>
 				<width>1280</width>
-				<texture>windows/bg/darkspot.png</texture>
+				<texture colordiffuse="$VAR[darkpulsediffuse]">windows/bg/darkspot.png</texture>
 				<align>center</align>
 				<aligny>center</aligny>
 			</control>				
@@ -105,7 +140,7 @@
 				<left>-800</left>
 				<height>720</height>
 				<width>1920</width>
-				<texture>windows/bg/darkspot.png</texture>
+				<texture colordiffuse="$VAR[darkpulsediffuse]">windows/bg/darkspot.png</texture>
 				<align>center</align>
 				<aligny>center</aligny>
 					<animation type="Conditional" condition="true" loop="true" reversible="false">
@@ -119,7 +154,7 @@
 				<left>-333</left>
 				<height>720</height>
 				<width>1920</width>
-				<texture>windows/bg/darkspot.png</texture>
+				<texture colordiffuse="$VAR[darkpulsediffuse]">windows/bg/darkspot.png</texture>
 				<align>center</align>
 				<aligny>center</aligny>
 					<animation type="Conditional" condition="true" loop="true" reversible="false">
@@ -139,6 +174,7 @@
 		    <include>VisibleHiddenSlideAnimation</include>
         <animation effect="slide" start="0,0" end="0,50" time="200" tween="sine" easing="out" condition="!Control.HasFocus(23)">Conditional</animation>
     		<control type="image">
+			<visible>!Skin.HasSetting(HomeMenuOverlay)</visible><!-- NERO MOD -->
 	        <include>FullscreenDimensions</include>
     			<texture background="true">windows/home/menu_overlay.png</texture>
 		      <include>HomeMenu_OpenCloseSlideAnimation</include>
